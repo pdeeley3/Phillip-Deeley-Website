@@ -44,3 +44,13 @@ footer {
     padding: 20px;
     font-size: 14px;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}
+
+a:hover {
+    color: #949494;
+}
