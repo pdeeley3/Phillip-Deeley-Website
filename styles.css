@@ -112,11 +112,12 @@
         background-color: #555;
     }
 
-    .social h1 {
+    .social h2 {
         margin: 0px;
+        font-size: 30px;
     }
 
-    .social h2 {
+    .social h3 {
         color: rgb(255, 255, 255);
         font-size: 20px;
         padding-bottom: 30px;
