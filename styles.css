@@ -19,14 +19,25 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: Arial, sans-serif;
+    background-color: rgb(44, 44, 44);
 }
 
 header {
     background-color: #333;
     color: white;
     padding: 20px 40px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }    
+
+header a {
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.1s;
+}
+
+header a:hover {
+    color: #949494;
+}
 
 header h1 {
     font-size: 24px;
@@ -43,14 +54,5 @@ footer {
     text-align: center;
     padding: 20px;
     font-size: 14px;
-}
-
-a {
-    color: white;
-    text-decoration: none;
-    transition-duration: 0.1s;
-}
-
-a:hover {
-    color: #949494;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
