@@ -47,6 +47,28 @@ main {
     flex: 1;
     padding: 40px;
 }
+
+.social {
+    background-color: #949494;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0.2);
+}
+
+.social a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition-duration: 0.1s;
+}
+
+.social a:hover {
+    background-color: #555;
+}
         
 footer {
     background-color: #333;
