@@ -79,6 +79,10 @@
         padding: 40px;
     }
 
+    #introduction a {
+        color: white;
+    }
+
     #socialboxes {
         display: flex;
         justify-content: center;
