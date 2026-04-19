@@ -73,6 +73,12 @@
         padding: 40px;
     }
 
+    #introduction {
+        color: white;
+        font-size: 20px;
+        padding: 40px;
+    }
+
     #socialboxes {
         display: flex;
         justify-content: center;
