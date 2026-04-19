@@ -5,7 +5,7 @@
 This website is a personal and open-source webpage for my own CV and social information. It acts as a portfolio external to services such as LinkedIn which employers (among others) can access in order to gain an understanding of Phillip Deeley.
 
 The project is always live on: https://phillip-deeley-website.phillipdeeley.workers.dev/
-It should also be live on: https://phillipdeeley.com
+It should also be live on: https://www.phillipdeeley.com/
 
 ## Installation & Usage
 By syncing this GitHub repository to CloudFlare, the website will automatically be hosted on the above URLs. 
