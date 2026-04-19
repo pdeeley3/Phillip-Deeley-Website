@@ -69,6 +69,13 @@
         padding: 40px;
     }
 
+    #socialboxes {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
     .social {
         background-color: #949494;
         padding: 30px;
