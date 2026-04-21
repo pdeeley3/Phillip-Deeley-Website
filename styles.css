@@ -94,10 +94,17 @@
         background-color: #949494;
         padding: 30px;
         border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0.2);
+        box-shadow: 5px 10px 10px rgba(0, 0, 0.2);
         width: 350px;
         height: 350px;
         text-align: center;
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffffff;
+    }
+
+    .social a:hover {
+        transform: scale(1.05);
     }
 
     .social a {
