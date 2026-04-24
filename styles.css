@@ -68,6 +68,43 @@
         rotate: 360deg;
         transform: scale(1.3);
     }
+
+    .header-buttons {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .header-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgb(44, 44, 44);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .header-btn:hover {
+        transform: scale(1.1);
+        color: white;
+    }
+
+    .header-btn:active {
+        transform: scale(0.95);
+    }
+
+    .header-btn:visited,
+    .header-btn:focus {
+        color: white;
+    }
             
     main {
         flex: 1;
