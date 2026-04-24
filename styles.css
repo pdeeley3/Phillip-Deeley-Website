@@ -75,7 +75,7 @@
         flex-direction: column;
         min-height: 100vh;
         font-family: Arial, sans-serif;
-        background-color: rgb(44, 44, 44);
+        background-color: var(--bg-primary);
         padding-top: 80px;
     }
 
