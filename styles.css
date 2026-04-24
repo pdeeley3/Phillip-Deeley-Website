@@ -11,6 +11,7 @@
     :root {
         --bg-primary: rgb(44, 44, 44);
         --bg-secondary: #4b4b4b;
+        --bg-tertiary: #555;
         --text-primary: white;
         --text-secondary: #d0d0d0;
         --bg-card: #454545;
@@ -21,6 +22,7 @@
     [data-theme="light"] {
         --bg-primary: rgb(235, 235, 235);
         --bg-secondary: #e0e0e0;
+        --bg-tertiary: #e2e2e2;
         --text-primary: #1a1a1a;
         --text-secondary: #444444;
         --bg-card: #ffffff;
@@ -193,7 +195,7 @@
 
     #socialboxes button:hover {
         transform: scale(1.05);
-        background-color: #555;
+        background-color: var(--bg-tertiary);
     }
 
     #socialboxes button:active {
