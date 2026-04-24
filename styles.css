@@ -394,4 +394,5 @@
         font-size: 14px;
         box-shadow: 0 2px 5px var(--shadow);
         transition: background-color 0.3s ease, color 0.3s ease;
+        z-index: 9999;
     }
