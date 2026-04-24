@@ -4,6 +4,6 @@
 /* Author: Phillip Deeley                     */
 /* Created: 24/04/2026                        */
 /* Last Edited: 24/04/2026                    */
-/* Version: 1.0.0                             */
+/* Version: 1.1.0                             */
 /* Notes: Main JavaScript file for website    */
 /* ========================================= */
