@@ -89,6 +89,7 @@
         left: 0;
         width: 100%;
         height: 100px;
+        z-index: 9999;
 
         display: flex;
         align-items: center;
@@ -170,7 +171,8 @@
     #introduction {
         color: var(--text-primary);
         font-size: 20px;
-        padding: 40px;
+        padding: 80px;
+        text-align: justify;
     }
 
     #introduction a {
