@@ -3,27 +3,27 @@
 <head>
     
     <!-- ========================================= -->
-    <!-- File Name: 404.html -->
+    <!-- File Name: contact.html -->
     <!-- Project: Phillip Deeley Website -->
     <!-- Author: Phillip Deeley -->
     <!-- Created: 24/04/2026 -->
     <!-- Last Edited: 24/04/2026 -->
-    <!-- Version: 1.0.2 -->
-    <!-- Notes: 404 error page -->
+    <!-- Version: 1.0.0 -->
+    <!-- Notes: Contact page with form -->
     <!-- ========================================= -->
 
     <!-- SEO Metadata -->
-    <meta name="description" content="Page not found - 404 Error">
-    <meta name="keywords" content="phillip, deeley, website, 404, error, not found">
+    <meta name="description" content="Contact Phillip Deeley">
+    <meta name="keywords" content="phillip, deeley, website, contact, email">
     <meta name="author" content="Phillip Deeley">
 
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "404 - Page Not Found",
-    "description": "The page you are looking for could not be found.",
-    "url": "https://www.phillipdeeley.com/404.html"
+    "name": "Contact | Phillip Deeley",
+    "description": "Get in touch with Phillip Deeley",
+    "url": "https://www.phillipdeeley.com/contact.html"
     }
     </script>   
 
@@ -34,7 +34,7 @@
     <!-- Standard Metadata-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Page Not Found | Phillip Deeley</title>
+    <title>Contact | Phillip Deeley</title>
     
     <!-- Links to styling and adds profile photo to favicon-->
     <link href="styles.css" rel="stylesheet" doctype="text/css">
@@ -59,12 +59,33 @@
 
     <main>
         
-        <div id="error-message">
-        <strong>404 - Page Not Found</strong><br><br>
-        Sorry, the page you are looking for does not exist. It may have been moved or deleted.<br><br>
-        You can return to the 
-        <a href="index.html">homepage</a>
-        or use the navigation above to find what you are looking for.
+        <div id="contact-form-container">
+            <h2>Get in Touch</h2>
+            <p>Have a question or want to work together? Send me a message!</p>
+            
+            <form id="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
 
     </main>
