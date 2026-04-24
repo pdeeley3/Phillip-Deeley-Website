@@ -10,7 +10,7 @@
 
 // Dark mode toggle functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const darkModeBtn = document.querySelector('.header-btn button');
+    const darkModeBtn = document.querySelector('.header-btn');
     
     if (darkModeBtn) {
         // Check for saved preference or default to dark mode
@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Apply saved theme on load
         if (savedTheme === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
-            darkModeBtn.innerHTML = '&#9788;'; // Sun symbol for light mode
+            darkModeBtn.innerHTML = '&#9790;'; // Moon symbol for toggling dark mode
         } else {
             document.documentElement.setAttribute('data-theme', 'dark');
-            darkModeBtn.innerHTML = '&#9790;'; // Moon symbol for dark mode
+            darkModeBtn.innerHTML = '&#9788;'; // Sun symbol for toggling light mode
         }
         
         // Toggle theme on click
@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update button symbol
             if (newTheme === 'light') {
-                darkModeBtn.innerHTML = '&#9788;'; // Sun
-            } else {
                 darkModeBtn.innerHTML = '&#9790;'; // Moon
+            } else {
+                darkModeBtn.innerHTML = '&#9788;'; // Sun
             }
         });
     }
