@@ -9,13 +9,13 @@
 /* ========================================= */
 
 // 404 error handling
-const validPages = ['index.html', 'contact.html', '404.html'];
-const currentPage = window.location.pathname.split('/').pop();
-const pageExists = validPages.includes(currentPage);
+//const validPages = ['index.html', 'contact.html', '404.html'];
+//const currentPage = window.location.pathname.split('/').pop();
+//const pageExists = validPages.includes(currentPage);
 
-if (!pageExists) {
-  location.replace('404.html');
-}
+//if (!pageExists) {
+//  location.replace('404.html');
+//}
 
 
 // Dark mode toggle functionality
