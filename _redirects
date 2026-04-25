@@ -1,0 +1,5 @@
+# Static site redirects configuration
+# Works with:  Cloudflare Pages automaticall - check if changing hosts
+
+# 404 handler - serve 404.html for all non-existent paths
+/*  /404.html  404
