@@ -173,8 +173,11 @@
     #introduction {
         color: var(--text-primary);
         font-size: 20px;
-        padding: 80px;
+        margin-left: 10%;
+        margin-right: 10%;
         text-align: justify;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     #introduction a {
