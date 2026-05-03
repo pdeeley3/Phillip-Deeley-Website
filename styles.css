@@ -123,11 +123,6 @@
         transition-duration : 0.4s;
     }
 
-    header #profilephoto:hover {
-        rotate: 360deg;
-        transform: scale(1.3);
-    }
-
     .header-buttons {
         display: flex;
         gap: 15px;
