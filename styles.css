@@ -180,6 +180,12 @@
         color: var(--text-primary);
     }
 
+    #intro_bg {
+        padding: 35px;
+        background-color: var(--bg-card);
+        border-radius: 18px;
+    }
+
     #socialboxes {
         display: flex;
         justify-content: center;
