@@ -3,8 +3,8 @@
 /* Project: Phillip Deeley Website            */
 /* Author: Phillip Deeley                     */
 /* Created: 24/04/2026                        */
-/* Last Edited: 05/05/2026                    */
-/* Version: 1.1.3                             */
+/* Last Edited: 08/05/2026                    */
+/* Version: 1.1.4                             */
 /* Notes: Main JavaScript file for website    */
 /* ========================================= */
 
