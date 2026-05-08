@@ -163,17 +163,17 @@
             
     main {
         flex: 1;
-        padding: 40px;
+        padding: 30px;
     }
 
     #introduction {
         color: var(--text-primary);
         font-size: 20px;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin: 0 auto;
+        max-width: 1040px;
         text-align: justify;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     #introduction a {
@@ -181,7 +181,7 @@
     }
 
     #intro_bg {
-        padding: 35px;
+        padding: 28px;
         background-color: var(--bg-card);
         border-radius: 18px;
     }
@@ -189,8 +189,11 @@
     #socialboxes {
         display: flex;
         justify-content: center;
+        align-items: stretch;
         gap: 40px;
         flex-wrap: wrap;
+        margin: 20px auto 0;
+        max-width: 1040px;
     }
 
     #socialboxes button {
@@ -209,19 +212,23 @@
 
     .social {
         background-color: var(--bg-card);
-        padding: 30px;
+        padding: 24px;
         border-radius: 10px;
         box-shadow: 5px 10px 10px var(--shadow);
-        width: 350px;
-        height: 350px;
+        flex: 0 1 320px;
+        width: 320px;
+        max-width: 320px;
+        min-width: 260px;
+        min-height: 300px;
         text-align: center;
     }
 
     .news-box {
         width: auto;
-        margin: 0 10% 80px;
+        max-width: 1040px;
+        margin: 0 auto 60px;
         background-color: rgba(16, 28, 48, 0.4);
-        padding: 35px;
+        padding: 30px;
         border-radius: 18px;
         box-shadow: 6px 14px 20px rgba(0, 0, 0, 0.28);
         border: 1px solid rgba(255, 255, 255, 0.08);
@@ -333,8 +340,8 @@
     .social h3 {
         color: var(--text-secondary);
         font-size: 20px;
-        padding-bottom: 30px;
-        padding-top: 20px;
+        padding-bottom: 24px;
+        padding-top: 18px;
     }
 
     .social img {
