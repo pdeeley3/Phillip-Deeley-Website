@@ -18,6 +18,8 @@
         --border-color: #555;
         --shadow: rgba(0, 0, 0, 0.2);
         --announcement-bg: rgba(16, 28, 48, 0.4);
+        --bg-gradient-a: #2e2e2e;
+        --bg-gradient-b: #3d2c5a;
     }
 
     [data-theme="light"] {
@@ -29,6 +31,8 @@
         --bg-card: #ffffff;
         --border-color: #ccc;
         --shadow: rgba(0, 0, 0, 0.1);
+        --bg-gradient-a: #f4f4f4;
+        --bg-gradient-b: #d8c7f2;
     }
 
     * {
@@ -38,14 +42,44 @@
         font-family: 'Inter', sans-serif;
     }
 
+    html {
+        background-color: var(--bg-primary);
+    }
+
     body {
+        position: relative;
+        overflow-x: hidden;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
         font-family: Arial, sans-serif;
         background-color: var(--bg-primary);
+        background-image: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-primary) 30%, var(--bg-gradient-b) 48%, var(--bg-gradient-a) 68%, var(--bg-primary) 100%);
+        background-size: 320% 320%;
+        background-repeat: no-repeat;
+        background-position: 0% 0%;
+        background-attachment: fixed;
+        animation: backgroundDrift 5s ease-in-out infinite;
         padding-top: 80px;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition: color 0.3s ease;
+    }
+
+    @keyframes backgroundDrift {
+        0% {
+            background-position: 0% 0%;
+        }
+        25% {
+            background-position: 100% 15%;
+        }
+        50% {
+            background-position: 20% 100%;
+        }
+        75% {
+            background-position: 85% 85%;
+        }
+        100% {
+            background-position: 0% 0%;
+        }
     }
 
     /* Page load animation */
@@ -72,15 +106,6 @@
     body main > *:nth-child(5) { animation-delay: 0.4s; }
     body main > *:nth-child(6) { animation-delay: 0.5s; }
     body main > *:nth-child(7) { animation-delay: 0.6s; }
-
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        font-family: Arial, sans-serif;
-        background-color: var(--bg-primary);
-        padding-top: 80px;
-    }
 
     header {
         background-color: var(--bg-secondary);
