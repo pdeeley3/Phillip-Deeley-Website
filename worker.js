@@ -38,26 +38,33 @@ export default {
                 });
             }
 
-            // Send email using Cloudflare Email API or external service
-            // For now, we'll log the submission and return success
-            console.log('Contact form submission:', {
-                name,
-                email,
-                subject,
-                message,
-                timestamp: new Date().toISOString()
-            });
-
-            // In a real implementation, you would:
-            // 1. Use an email service like SendGrid, Mailgun, or Resend
-            // 2. Store the submission in a database
-            // 3. Send notification to the site owner
+            // Send email using Resend API
+            const resendApiKey = env.RESEND_API_KEY;
             
-            // For demo purposes, we'll simulate successful email sending
-            const emailContent = {
-                to: 'phillipdeeley@gmail.com',
-                from: email,
+            if (!resendApiKey) {
+                console.log('Contact form submission (no API key):', {
+                    name,
+                    email,
+                    subject,
+                    message,
+                    timestamp: new Date().toISOString()
+                });
+                
+                return new Response(JSON.stringify({ 
+                    success: false, 
+                    error: 'Email service not configured. Please contact the site administrator.' 
+                }), {
+                    status: 500,
+                    headers: getCORSHeaders()
+                });
+            }
+
+            // Prepare email content
+            const emailData = {
+                from: 'noreply@phillipdeeley.com',
+                to: ['phillipdeeley@gmail.com'],
                 subject: `Contact Form: ${subject}`,
+                reply_to: email,
                 text: `
 Name: ${name}
 Email: ${email}
@@ -65,11 +72,38 @@ Subject: ${subject}
 
 Message:
 ${message}
+                `.trim(),
+                html: `
+<h2>New Contact Form Submission</h2>
+<p><strong>Name:</strong> ${name}</p>
+<p><strong>Email:</strong> ${email}</p>
+<p><strong>Subject:</strong> ${subject}</p>
+<hr>
+<h3>Message:</h3>
+<p>${message.replace(/\n/g, '<br>')}</p>
+<hr>
+<p><small>This message was sent from the contact form on phillipdeeley.com</small></p>
                 `.trim()
             };
 
-            // Simulate email sending delay
-            await new Promise(resolve => setTimeout(resolve, 100));
+            // Send email using Resend API
+            const emailResponse = await fetch('https://api.resend.com/emails', {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${resendApiKey}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(emailData)
+            });
+
+            if (!emailResponse.ok) {
+                const errorData = await emailResponse.text();
+                console.error('Email sending failed:', errorData);
+                throw new Error('Failed to send email');
+            }
+
+            const emailResult = await emailResponse.json();
+            console.log('Email sent successfully:', emailResult);
 
             return new Response(JSON.stringify({ 
                 success: true, 
