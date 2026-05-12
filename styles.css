@@ -8,6 +8,7 @@
     /* Notes: Main stylesheet for website        */
     /* ========================================= */
 
+    /* CSS custom properties for theme variables */
     :root {
         --bg-primary: rgb(44, 44, 44);
         --bg-secondary: #4b4b4b;
@@ -22,6 +23,7 @@
         --bg-gradient-b: #3d2c5a;
     }
 
+    /* Light theme color overrides */
     [data-theme="light"] {
         --bg-primary: rgb(235, 235, 235);
         --bg-secondary: #efefef;
@@ -35,6 +37,7 @@
         --bg-gradient-b: #d8c7f2;
     }
 
+    /* Global reset and base styles */
     * {
         margin: 0;
         padding: 0;
@@ -42,10 +45,12 @@
         font-family: 'Inter', sans-serif;
     }
 
+    /* HTML root element styles */
     html {
         background-color: var(--bg-primary);
     }
 
+    /* Main body styles with animated background */
     body {
         position: relative;
         overflow-x: hidden;
@@ -64,6 +69,7 @@
         transition: color 0.3s ease;
     }
 
+    /* Background drift animation keyframes */
     @keyframes backgroundDrift {
         0% {
             background-position: 0% 0%;
@@ -82,7 +88,7 @@
         }
     }
 
-    /* Page load animation */
+    /* Page load animation keyframes */
     @keyframes slideUpFade {
         from {
             opacity: 0;
@@ -125,20 +131,24 @@
         transition: background-color 0.3s ease, color 0.3s ease;
     }    
 
+    /* Header Link Styles */
     header a {
         color: var(--text-primary);
         text-decoration: none;
-        transition-duration: 0.1s;
+        transition: color 0.3s ease;
     }
 
     header a:hover {
         color: var(--text-secondary);
     }
 
+    
+    /* Header Heading Styles */
     header h1 {
         font-size: 30px;
     }
 
+    /* Profile photo styles */
     header #profilephoto {
         width: 130px;
         height: 130px;
@@ -150,12 +160,14 @@
         box-shadow: 0 4px 16px var(--shadow);
     }
 
+    /* Header button container */
     .header-buttons {
         display: flex;
         gap: 15px;
         align-items: center;
     }
 
+    /* Header button styles */
     .header-btn {
         display: flex;
         align-items: center;
@@ -173,6 +185,7 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    /* Header button hover effects */
     .header-btn:hover {
         transform: scale(1.08) translateY(-2px);
         background-color: var(--bg-tertiary);
@@ -180,21 +193,25 @@
         color: var(--text-primary);
     }
 
+    /* Header button active states */
     .header-btn:active {
         transform: scale(0.96);
-        transition: all 0.1s ease;
+        transition: all 0.3s ease;
     }
 
+    /* Header button visited and focus states */
     .header-btn:visited,
     .header-btn:focus {
         color: var(--text-primary);
     }
             
+    /* Main content area styles */
     main {
         flex: 1;
         padding: 30px;
     }
 
+    /* Introduction section styles */
     #introduction {
         color: var(--text-primary);
         font-size: 20px;
@@ -205,10 +222,13 @@
         padding-bottom: 60px;
     }
 
+    /* Introduction link styles */
     #introduction a {
         color: var(--text-primary);
+        transition: color 0.3s ease;
     }
 
+    /* Introduction background card */
     #intro_bg {
         padding: 28px;
         background-color: var(--bg-card);
@@ -217,6 +237,7 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    /* Social boxes container */
     #socialboxes {
         display: flex;
         justify-content: center;
@@ -227,21 +248,25 @@
         max-width: 1040px;
     }
 
+    /* Social boxes button transitions */
     #socialboxes button {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         border-width: 0px;
     }
 
+    /* Social boxes hover effects */
     #socialboxes button:hover {
         transform: scale(1.03) translateY(-4px);
         background-color: var(--bg-tertiary);
         box-shadow: 8px 16px 24px var(--shadow);
     }
 
+    /* Social boxes active states */
     #socialboxes button:active {
         outline: none;
     }
 
+    /* Individual social card styles */
     .social {
         background-color: var(--bg-card);
         padding: 24px;
@@ -256,6 +281,7 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    /* News announcement box styles */
     .news-box {
         width: auto;
         max-width: 1040px;
@@ -271,10 +297,12 @@
         overflow: hidden;
     }
 
+    /* Light theme news box override */
     [data-theme="light"] .news-box {
         background-color: rgba(16, 28, 48, 0.2);
     }
 
+    /* News box background image */
     .news-box::before {
         content: '';
         position: absolute;
@@ -288,22 +316,26 @@
         z-index: 0;
     }
 
+    /* Light theme news box background */
     [data-theme="light"] .news-box::before {
         filter: blur(18px) brightness(0.8);
         opacity: 0.7;
     }
 
+    /* News box content positioning */
     .news-box > * {
         position: relative;
         z-index: 1;
     }
 
+    /* News box heading styles */
     .news-box h2 {
         font-size: 32px;
         margin-bottom: 18px;
         letter-spacing: 0.5px;
     }
 
+    /* News box paragraph styles */
     .news-box p {
         font-size: 20px;
         line-height: 1.7;
@@ -311,15 +343,18 @@
         max-width: 900px;
     }
 
+    /* News box link styles */
     .news-box a {
         color: white;
         text-decoration: none;
     }
 
+    /* News box social button override */
     .news-box .social-button {
         color: var(--text-primary);
     }
 
+    /* General social button styles */
     .social-button {
         display: inline-block;
         margin-top: 24px;
@@ -333,17 +368,20 @@
         box-shadow: 0 2px 8px var(--shadow);
     }
 
+    /* Social button hover effects */
     .social-button:hover {
         transform: scale(1.05) translateY(-2px);
         background-color: var(--bg-secondary);
         box-shadow: 0 4px 12px var(--shadow);
     }
 
+    /* Social button active states */
     .social-button:active {
         transform: scale(0.98);
-        transition: all 0.1s ease;
+        transition: all 0.3s ease;
     }
 
+    /* Social card link styles */
     .social a {
         display: inline-block;
         margin: 10px;
@@ -358,23 +396,27 @@
         box-shadow: 0 2px 8px var(--shadow);
     }
 
+    /* Social card link hover effects */
     .social a:hover {
         transform: scale(1.05) translateY(-2px);
         background-color: var(--bg-secondary);
         box-shadow: 0 4px 12px var(--shadow);
     }
 
+    /* Social card link active states */
     .social a:active {
         transform: scale(0.98);
-        transition: all 0.1s ease;
+        transition: all 0.3s ease;
     }
 
+    /* Social card heading styles */
     .social h2 {
         margin: 0px;
         font-size: 30px;
         color: var(--text-primary);
     }
 
+    /* Social card subheading styles */
     .social h3 {
         color: var(--text-secondary);
         font-size: 20px;
@@ -382,11 +424,13 @@
         padding-top: 18px;
     }
 
+    /* Social card image styles */
     .social img {
         width: 40px;
         height: 40px;
     }
 
+    /* Social title container */
     .social-title {
         align-items: center;
         display: flex;
@@ -394,17 +438,20 @@
         gap: 12px;
     }
 
+    /* Social title heading */
     .social-title h1 {
         margin: 0;
         line-height: 1;
     }
 
+    /* Social title image */
     .social-title img {
         display: block;
         width: 40px;
         height: 40px;
     }
 
+    /* Circular image modifier */
     #circular {
         border-radius: 25%;
     }
@@ -423,17 +470,20 @@
         padding: 40px;
     }
 
+    /* Error message heading */
     #error-message strong {
         font-size: 48px;
         display: block;
         margin-bottom: 20px;
     }
 
+    /* Error message link styles */
     #error-message a {
         color: var(--text-primary);
         text-decoration: underline;
     }
 
+    /* Error message link hover */
     #error-message a:hover {
         color: var(--text-secondary);
     }
@@ -447,25 +497,30 @@
         text-align: center;
     }
 
+    /* Contact form heading */
     #contact-form-container h2 {
         font-size: 36px;
         margin-bottom: 10px;
     }
 
+    /* Contact form description */
     #contact-form-container p {
         font-size: 18px;
         margin-bottom: 30px;
         color: var(--text-secondary);
     }
 
+    /* Contact form wrapper */
     #contact-form {
         text-align: left;
     }
 
+    /* Form group container */
     .form-group {
         margin-bottom: 20px;
     }
 
+    /* Form label styles */
     .form-group label {
         display: block;
         margin-bottom: 8px;
@@ -474,6 +529,7 @@
         color: var(--text-primary);
     }
 
+    /* Form input and textarea styles */
     .form-group input,
     .form-group textarea {
         width: 100%;
@@ -484,20 +540,23 @@
         border: 1px solid var(--border-color);
         border-radius: 8px;
         color: var(--text-primary);
-        transition: border-color 0.2s ease;
+        transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     }
 
+    /* Form input focus states */
     .form-group input:focus,
     .form-group textarea:focus {
         outline: none;
         border-color: var(--text-secondary);
     }
 
+    /* Textarea specific styles */
     .form-group textarea {
         resize: vertical;
         min-height: 120px;
     }
 
+    /* Submit button styles */
     .submit-btn {
         display: block;
         width: 100%;
@@ -511,18 +570,21 @@
         border-radius: 8px;
         cursor: pointer;
         box-shadow: 0 2px 4px var(--shadow);
-        transition: transform 0.2s ease, background-color 0.2s ease;
+        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
     }
 
+    /* Submit button hover effects */
     .submit-btn:hover {
         transform: scale(1.02);
         background-color: var(--border-color);
     }
 
+    /* Submit button active states */
     .submit-btn:active {
         transform: scale(0.98);
     }
             
+    /* Footer styles */
     footer {
         background-color: var(--bg-secondary);
         color: var(--text-primary);
