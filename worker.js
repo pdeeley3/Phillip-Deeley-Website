@@ -41,24 +41,7 @@ export default {
             // Send email using Resend API
             const resendApiKey = env.RESEND_API_KEY;
             
-            if (!resendApiKey) {
-                console.log('Contact form submission (no API key):', {
-                    name,
-                    email,
-                    subject,
-                    message,
-                    timestamp: new Date().toISOString()
-                });
-                
-                return new Response(JSON.stringify({ 
-                    success: false, 
-                    error: 'Email service not configured. Please contact the site administrator.' 
-                }), {
-                    status: 500,
-                    headers: getCORSHeaders()
-                });
-            }
-
+            
             // Prepare email content
             const emailData = {
                 from: 'noreply@phillipdeeley.com',
