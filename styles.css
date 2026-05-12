@@ -3,8 +3,8 @@
     /* Project: Phillip Deeley Website           */
     /* Author: Phillip Deeley                    */
     /* Created: 19/04/2026                       */
-    /* Last Edited: 08/05/2026                   */
-    /* Version: 1.1.4                            */
+    /* Last Edited: 12/05/2026                   */
+    /* Version: 1.1.5                            */
     /* Notes: Main stylesheet for website        */
     /* ========================================= */
 
@@ -59,7 +59,7 @@
         background-repeat: no-repeat;
         background-position: 0% 0%;
         background-attachment: fixed;
-        animation: backgroundDrift 5s ease-in-out infinite;
+        animation: backgroundDrift 25s ease-in-out infinite;
         padding-top: 80px;
         transition: color 0.3s ease;
     }
@@ -140,13 +140,14 @@
     }
 
     header #profilephoto {
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
         border-radius: 50%;
-        margin-right: 20px;
-        margin-top: 51px;
+        margin-right: 10px;
+        margin-top: 45px;
         float: right;
-        transition-duration : 0.4s;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 16px var(--shadow);
     }
 
     .header-buttons {
@@ -168,17 +169,20 @@
         font-size: 20px;
         text-decoration: none;
         cursor: pointer;
-        box-shadow: 0 2px 4px var(--shadow);
-        transition: transform 0.2s ease, background-color 0.2s ease, color 0.3s ease;
+        box-shadow: 0 2px 8px var(--shadow);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .header-btn:hover {
-        transform: scale(1.1);
+        transform: scale(1.08) translateY(-2px);
+        background-color: var(--bg-tertiary);
+        box-shadow: 0 4px 12px var(--shadow);
         color: var(--text-primary);
     }
 
     .header-btn:active {
-        transform: scale(0.95);
+        transform: scale(0.96);
+        transition: all 0.1s ease;
     }
 
     .header-btn:visited,
@@ -208,7 +212,9 @@
     #intro_bg {
         padding: 28px;
         background-color: var(--bg-card);
-        border-radius: 18px;
+        border-radius: 16px;
+        box-shadow: 0 4px 16px var(--shadow);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     #socialboxes {
@@ -222,13 +228,14 @@
     }
 
     #socialboxes button {
-        transition-duration: 0.1s;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         border-width: 0px;
     }
 
     #socialboxes button:hover {
-        transform: scale(1.05);
+        transform: scale(1.03) translateY(-4px);
         background-color: var(--bg-tertiary);
+        box-shadow: 8px 16px 24px var(--shadow);
     }
 
     #socialboxes button:active {
@@ -238,14 +245,15 @@
     .social {
         background-color: var(--bg-card);
         padding: 24px;
-        border-radius: 10px;
-        box-shadow: 5px 10px 10px var(--shadow);
+        border-radius: 16px;
+        box-shadow: 4px 8px 16px var(--shadow);
         flex: 0 1 320px;
         width: 320px;
         max-width: 320px;
         min-width: 260px;
         min-height: 300px;
         text-align: center;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .news-box {
@@ -319,19 +327,21 @@
         background-color: var(--bg-primary);
         color: var(--text-primary);
         text-decoration: none;
-        border-radius: 5px;
-        transition-duration: 0.1s;
+        border-radius: 8px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         font-size: 16px;
-        box-shadow: 0 2px 4px var(--shadow);
+        box-shadow: 0 2px 8px var(--shadow);
     }
 
     .social-button:hover {
-        transform: scale(1.05);
+        transform: scale(1.05) translateY(-2px);
         background-color: var(--bg-secondary);
+        box-shadow: 0 4px 12px var(--shadow);
     }
 
     .social-button:active {
-        transform: scale(0.95);
+        transform: scale(0.98);
+        transition: all 0.1s ease;
     }
 
     .social a {
@@ -341,19 +351,22 @@
         background-color: var(--bg-primary);
         color: var(--text-primary);
         text-decoration: none;
-        border-radius: 5px;
-        transition-duration: 0.1s;
+        border-radius: 8px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         align-items: center;
         font-size: 16px;
+        box-shadow: 0 2px 8px var(--shadow);
     }
 
     .social a:hover {
-        transform: scale(1.05);
+        transform: scale(1.05) translateY(-2px);
         background-color: var(--bg-secondary);
+        box-shadow: 0 4px 12px var(--shadow);
     }
 
     .social a:active {
-        transform: scale(0.95);
+        transform: scale(0.98);
+        transition: all 0.1s ease;
     }
 
     .social h2 {
