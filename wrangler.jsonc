@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "phillip-deeley-website",
+  "main": "worker.js",
   "compatibility_date": "2026-05-05",
   "observability": {
     "enabled": true
@@ -10,5 +11,8 @@
   },
   "compatibility_flags": [
     "nodejs_compat"
+  ],
+  "routes": [
+    { "pattern": "phillipdeeley.com/contact", "zone_name": "phillipdeeley.com" }
   ]
 }

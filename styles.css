@@ -584,6 +584,28 @@
         transform: scale(0.98);
     }
             
+    /* Form message feedback styles */
+    .form-message {
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 16px;
+        display: none;
+    }
+
+    .form-message.success {
+        background-color: rgba(76, 175, 80, 0.1);
+        border: 1px solid rgba(76, 175, 80, 0.3);
+        color: #4CAF50;
+    }
+
+    .form-message.error {
+        background-color: rgba(244, 67, 54, 0.1);
+        border: 1px solid rgba(244, 67, 54, 0.3);
+        color: #F44336;
+    }
+
     /* Footer styles */
     footer {
         background-color: var(--bg-secondary);
