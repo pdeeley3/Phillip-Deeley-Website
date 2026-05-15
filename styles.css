@@ -226,6 +226,8 @@
     main {
         flex: 1;
         padding: 30px;
+        /* Prevent horizontal issues on narrow screens */
+        width: 100%;
     }
 
     /* Introduction section styles */
@@ -478,14 +480,14 @@
         color: var(--text-primary);
         font-size: 24px;
         text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        max-width: 800px;
+        /* Use normal document flow so it cannot overflow the viewport */
+        position: relative;
+        width: min(800px, 100%);
+        margin: 0 auto;
         padding: 40px;
+        box-sizing: border-box;
     }
+
 
     /* Error message heading */
     #error-message strong {
@@ -633,4 +635,6 @@
         box-shadow: 0 2px 5px var(--shadow);
         transition: background-color 0.3s ease, color 0.3s ease;
         z-index: 9999;
+        /* Keep footer anchored at the bottom of the flex layout */
+        margin-top: auto;
     }
