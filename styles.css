@@ -301,7 +301,7 @@
     }
 
     /* News announcement box styles */
-    .news-box {
+    .news-box-1, .news-box-2 {
         width: auto;
         max-width: 1040px;
         margin: 0 auto 60px;
@@ -317,16 +317,25 @@
     }
 
     /* Light theme news box override */
-    [data-theme="light"] .news-box {
+    [data-theme="light"] .news-box-1, .news-box-2 {
         background-color: rgba(16, 28, 48, 0.2);
     }
 
-    /* News box background image */
-    .news-box::before {
+    /* Sailing news box background image */
+    .news-box-1::before {
+        background-image: url('assets/bg-1.jpg');
+    }
+
+    /* Music news box background image */
+    .news-box-2::before {
+        background-image: url('assets/bg-2.jpg');
+    }
+
+    /* Both news boxes background image */
+    .news-box-1::before, .news-box-2::before {
         content: '';
         position: absolute;
         inset: 0;
-        background-image: url('assets/bg-1.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -335,27 +344,28 @@
         z-index: 0;
     }
 
+
     /* Light theme news box background */
-    [data-theme="light"] .news-box::before {
+    [data-theme="light"] .news-box-1::before, .news-box-2::before {
         filter: blur(18px) brightness(0.8);
         opacity: 0.7;
     }
 
     /* News box content positioning */
-    .news-box > * {
+    .news-box-1 > *, .news-box-2 > * {
         position: relative;
         z-index: 1;
     }
 
     /* News box heading styles */
-    .news-box h2 {
+    .news-box-1 h2, .news-box-2 h2 {
         font-size: 32px;
         margin-bottom: 18px;
         letter-spacing: 0.5px;
     }
 
     /* News box paragraph styles */
-    .news-box p {
+    .news-box-1 p, .news-box-2 p{
         font-size: 20px;
         line-height: 1.7;
         color: white;
@@ -363,13 +373,13 @@
     }
 
     /* News box link styles */
-    .news-box a {
+    .news-box-1 a, .news-box-2 a {
         color: white;
         text-decoration: none;
     }
 
     /* News box social button override */
-    .news-box .social-button {
+    .news-box-1 .news-box-2 .social-button {
         color: var(--text-primary);
     }
 
