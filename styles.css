@@ -230,6 +230,66 @@
         width: 100%;
     }
 
+    /* Results table */
+    .results-table-container {
+        width: 100%;
+        max-width: 960px;
+        margin: 30px auto;
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        background-color: var(--bg-card);
+        box-shadow: 0 8px 24px var(--shadow);
+    }
+
+    .results-table {
+        width: 100%;
+        border-collapse: collapse;
+        color: var(--text-primary);
+        text-align: left;
+    }
+
+    .results-table a,
+    .results-table a:visited,
+    .results-table a:hover,
+    .results-table a:active {
+        color: white;
+        text-decoration: underline;
+        transition: none;
+    }
+
+    .results-table th,
+    .results-table td {
+        padding: 16px 22px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .results-table thead {
+        background-color: var(--bg-tertiary);
+    }
+
+    .results-table thead th {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .results-table td:last-child,
+    .results-table thead th:last-child {
+        width: 100px;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .results-table .results-average {
+        background-color: var(--bg-tertiary);
+        font-weight: 700;
+    }
+
+    .results-table .results-average th,
+    .results-table .results-average td {
+        border-bottom: 0;
+    }
+
     /* Introduction section styles */
     #introduction {
         color: var(--text-primary);
