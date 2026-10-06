@@ -253,7 +253,7 @@
     .results-table a:visited,
     .results-table a:hover,
     .results-table a:active {
-        color: white;
+        color: var(--text-primary);
         text-decoration: underline;
         transition: none;
     }
